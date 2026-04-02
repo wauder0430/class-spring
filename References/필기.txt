@@ -1,0 +1,86 @@
+Spring Framework
+
+Framework vs Library
+- 누군가가 미리 만들어놓은 기능들의 집합
+
+Library
+- 행동/흐름을 주체 > 개발자(사람)
+- 뷔페
+- 도구의 집합
+
+Framework
+- 행동/흐름을 주체 > 시스템(틀)
+- 코스 요리
+- 도구 제공 + 체계(틀) 제공
+
+
+
+Servlet/JSP > Library + Runtime
+Spring > Framework
+
+A - 자바 
+B - 자바  > 홍길동(10년차)
+
+
+전자정부프레임워크
+- Spring Framework + 추가 가공  > 선택
+
+
+
+
+
+Spring Framework
+> Spring Ecosystems
+
+
+
+Server Side Rendering, SSR
+- Servlet/JSP
+
+Client Side Rendering, CSR
+- JavaScript
+
+
+Multi Pages Application, MPA
+- 여러장의 페이지를 가지고 사이트를 만든다.
+- list.jsp, add.jsp, edit.jsp
+
+
+Single Page Application, SPA
+- 1장의 페이지를 가지고 사이트를 만든다.
+- board.jsp > C R U D
+
+
+Spring 수업 > SSR + MPA
+- Spring Framework
+- DB: MyBatis
+- Spring Security: Session, OAuth2
+- 프로젝트: Servlet/JSP 분위기
+
+Spring Boot 수업 > CSR + SPA
+- Spring Boot
+- DB: Spring Data + JPA
+- Spring Security: JWT
+- Vue(X) > React(O)
+- Spring AI
+- 프로젝트: 앱 or 모바일
+
+기타
+- JavaScript 비동기 통신(ajax, fetch, axios)
+- OpenAPI
+- REST API
+- Docker
+- AWS
+- CI/CD
+
+
+
+
+
+따로공부(선택)
+batch
+
+
+
+
+

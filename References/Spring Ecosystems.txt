@@ -1,0 +1,190 @@
+flowchart LR
+    %% =========================
+    %% 스프링 활성 프로젝트 관계도
+    %% 기준:
+    %% - Spring Framework = 핵심 기반
+    %% - Spring Boot = Spring 기반 앱 개발 단순화
+    %% - Spring Data / Spring Cloud = umbrella project
+    %% - 공식 설명이 분명한 관계만 연결
+    %% =========================
+
+    %% -------------------------
+    %% 핵심 축
+    %% -------------------------
+    SF["Spring Framework
+    (스프링의 핵심 기반 프레임워크)"]
+
+    SB["Spring Boot
+    (Spring 기반 애플리케이션 개발 단순화)"]
+
+    %% Framework -> Boot
+    SF -->|기반 위에서 사용| SB
+
+    %% -------------------------
+    %% Framework와 직접 연관된 활성 프로젝트
+    %% -------------------------
+    SS["Spring Security
+    (인증/인가/보안)"]
+
+    SI["Spring Integration
+    (시스템 통합, 메시징, EIP 지원)"]
+
+    SBatch["Spring Batch
+    (대용량 일괄 처리)"]
+
+    SAI["Spring AI
+    (AI 애플리케이션 개발 지원)"]
+
+    SH["Spring HATEOAS
+    (하이퍼미디어 API 지원)"]
+
+    SGQL["Spring for GraphQL
+    (GraphQL 지원)"]
+
+    SWF["Spring Web Flow
+    (웹 흐름 제어)"]
+
+    SWS["Spring Web Services
+    (SOAP/계약 중심 웹서비스)"]
+
+    SAMQP["Spring AMQP
+    (AMQP 기반 메시징 지원)"]
+
+    SKafka["Spring for Apache Kafka
+    (Kafka 연동)"]
+
+    SLDAP["Spring LDAP
+    (LDAP 연동)"]
+
+    SSession["Spring Session
+    (세션 관리 추상화)"]
+
+    SRD["Spring REST Docs
+    (REST API 문서화)"]
+
+    SMod["Spring Modulith
+    (모듈형 모놀리스 구조 지원)"]
+
+    %% Framework와의 기본 연결
+    SF -->|기반 프로그래밍 모델 공유| SS
+    SF -->|기반 프로그래밍 모델 확장| SI
+    SF -->|기반 위에서 동작| SBatch
+    SF -->|Spring 설계 원칙 적용| SAI
+    SF -->|웹/표현 계층 확장| SH
+    SF -->|웹 계층 연동| SGQL
+    SF -->|웹 흐름 제어| SWF
+    SF -->|웹서비스 지원| SWS
+    SF -->|메시징 지원 확장| SAMQP
+    SF -->|메시징 지원 확장| SKafka
+    SF -->|디렉터리 연동| SLDAP
+    SF -->|웹 세션 관리 연계| SSession
+    SF -->|문서화 연계| SRD
+    SF -->|애플리케이션 구조화 지원| SMod
+
+    %% -------------------------
+    %% Boot와 직접 자주 연결되는 활성 프로젝트
+    %% -------------------------
+    SC["Spring Cloud
+    (분산 시스템/마이크로서비스용 umbrella project)"]
+
+    SD["Spring Data
+    (데이터 접근용 umbrella project)"]
+
+    SCDF["Spring Cloud Data Flow
+    (Stream/Task 기반 데이터 파이프라인 배포/운영)"]
+
+    SAS["Spring Authorization Server
+    (OAuth2 Authorization Server 구현)"]
+
+    %% Boot와의 주요 연결
+    SB -->|주요 실행/설정 기반| SC
+    SB -->|주요 실행/설정 기반| SD
+    SB -->|실무에서 함께 자주 사용| SSession
+    SB -->|실무에서 함께 자주 사용| SS
+    SB -->|Starter/자동설정으로 자주 결합| SAI
+    SB -->|Starter/자동설정으로 자주 결합| SKafka
+    SB -->|Starter/자동설정으로 자주 결합| SAMQP
+    SB -->|Starter/자동설정으로 자주 결합| SRD
+    SB -->|Starter/자동설정으로 자주 결합| SAS
+    SB -->|Boot 앱 배포 단위 활용| SCDF
+
+    %% -------------------------
+    %% Spring Data 대표 활성 하위 프로젝트
+    %% -------------------------
+    SDJPA["Spring Data JPA
+    (JPA 저장소 지원)"]
+
+    SDJDBC["Spring Data JDBC
+    (JDBC 저장소 지원)"]
+
+    SDMongo["Spring Data MongoDB
+    (MongoDB 지원)"]
+
+    SDRedis["Spring Data Redis
+    (Redis 지원)"]
+
+    SDREST["Spring Data REST
+    (Repository 기반 REST 노출)"]
+
+    SDElastic["Spring Data Elasticsearch
+    (Elasticsearch 지원)"]
+
+    SD -->|하위 프로젝트| SDJPA
+    SD -->|하위 프로젝트| SDJDBC
+    SD -->|하위 프로젝트| SDMongo
+    SD -->|하위 프로젝트| SDRedis
+    SD -->|하위 프로젝트| SDREST
+    SD -->|하위 프로젝트| SDElastic
+
+    %% Data REST는 Spring Data Repository 위에 올라감
+    SD -->|Repository 기반| SDREST
+
+    %% -------------------------
+    %% Spring Cloud 대표 활성 하위 프로젝트
+    %% -------------------------
+    SCConfig["Spring Cloud Config
+    (분산 환경 설정 서버/클라이언트)"]
+
+    SCGateway["Spring Cloud Gateway
+    (API Gateway)"]
+
+    SCStream["Spring Cloud Stream
+    (이벤트 기반 마이크로서비스)"]
+
+    SCFeign["Spring Cloud OpenFeign
+    (선언형 HTTP 클라이언트)"]
+
+    SCTask["Spring Cloud Task
+    (단기 실행 작업 처리)"]
+
+    SCFunction["Spring Cloud Function
+    (함수형 배포 모델)"]
+
+    SC -->|하위 프로젝트| SCConfig
+    SC -->|하위 프로젝트| SCGateway
+    SC -->|하위 프로젝트| SCStream
+    SC -->|하위 프로젝트| SCFeign
+    SC -->|하위 프로젝트| SCTask
+    SC -->|하위 프로젝트| SCFunction
+
+    %% Cloud 쪽의 공식적으로 비교적 분명한 연결
+    SB -->|Boot 앱과 자주 결합| SCConfig
+    SB -->|Boot 앱과 자주 결합| SCGateway
+    SB -->|Boot 앱과 자주 결합| SCStream
+    SB -->|Boot 앱과 자주 결합| SCFeign
+    SB -->|Boot 앱과 자주 결합| SCTask
+    SB -->|Boot 앱과 자주 결합| SCFunction
+
+    %% Stream / Task / Data Flow 관계
+    SCStream -->|파이프라인 구성 요소| SCDF
+    SCTask -->|파이프라인 구성 요소| SCDF
+
+    %% Integration과 Stream의 연관
+    SI -.->|메시징/통합 개념 연계| SCStream
+
+    %% Kafka / AMQP와 Stream의 연관
+    SKafka -.->|메시지 브로커 연계| SCStream
+    SAMQP -.->|메시지 브로커 연계| SCStream
+
+    classDef highlight fill:#d9ead3,stroke:#6aa84f,stroke-width:2px,color:#000;
+    class SF,SWS,SB,SS,SD,SDJPA,SDJDBC,SDREST,SAI,SSession,SAS,SRD highlight;

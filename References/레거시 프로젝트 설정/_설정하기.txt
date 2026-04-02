@@ -1,0 +1,10 @@
+우선 STS3 실행 후 Spring Legacy까지 한번 진행한다.
+그래야 아래의 폴더들이 생성된다.
+
+1. https-content.xml 복사
+- 워크스페이스\.metadata\.plugins\org.springsource.ide.eclipse.commons.content.core\https-content.xml
+
+2. org.springframework.templates.mvc-3.2.2.zip 압축풀기
+- 워크스페이스\.metadata\.sts\content\org.springframework.templates.mvc-3.2.2 폴더에 압축을 푼다.
+
+

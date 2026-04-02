@@ -1,0 +1,21 @@
+C:\code\spring > 워크스페이스
+
+C:\dev\sts-3.9.18.RELEASE
+- 1. JDK 11 기반 동작
+	- STS.ini
+- 2. Lombok 설정
+
+
+STS 워크스페이스 설정
+1. 폰트
+2. 인코딩
+3. 톰캣 설정
+
+
+
+
+
+
+
+
+
