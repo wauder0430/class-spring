@@ -1,0 +1,7 @@
+@GetMapping(value = "/${name}.do")
+	public String ${name}(Model model) {
+
+		${cursor}
+		
+		return "${name}";
+	}

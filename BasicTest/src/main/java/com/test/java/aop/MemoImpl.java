@@ -21,9 +21,9 @@ public class MemoImpl implements Memo {
 		
 		if (seq.equals("1"))
 			return "안녕하세요.";
-		else if (seq.equals("1"))
+		else if (seq.equals("2"))
 			return "홍길동입니다.";
-		else if (seq.equals("1"))
+		else if (seq.equals("3"))
 			return "메모 테스트.";
 		else
 			throw new Exception("존재하지 않은 메모");

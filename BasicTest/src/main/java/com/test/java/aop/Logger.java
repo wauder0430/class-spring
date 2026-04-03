@@ -2,6 +2,8 @@ package com.test.java.aop;
 
 import java.util.Calendar;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+
 // 보조 업무 > 로그 기록
 public class Logger {
 
@@ -14,9 +16,51 @@ public class Logger {
 	
 	public void test() {
 		
-		// 만약 보안기능이라면
-		System.out.println("보안 관련 확인");
+		System.out.println("test 보조 업무입니다.");
 		
 	}
+	
+	// 특정 업무 > 소요 시간
+	public void time(ProceedingJoinPoint jp) {
+		
+		long begin = System.nanoTime();
+		
+		//주업무 실행
+		// memo.addMemo(""): X
+		// - 프록시 객체 > jp
+		try {
+			jp.proceed();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		long end = System.nanoTime();
+	
+		System.out.printf("소요시간: %,dns\r", end - begin);
+	}
+	
+	public void checkVaild(Object result) {
+		
+		System.out.println("보조 업무 실행: " + result);
+		
+		if((boolean)result) {
+			System.out.println("주업무 정상 동작");
+		} else {
+			System.out.println("주업무 비정상 동작");
+		}
+		
+	}
+	
+	public void logException(Exception e) {
+	
+		System.out.println("보조 업무 실행 > " + e.getMessage());
+
+		// 에러 발생 > 대응
+		// - Log 기록
+		// - 담당자 연락 ..
+		
+	}
+	
 	
 }
