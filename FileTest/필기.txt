@@ -1,0 +1,20 @@
+Maven 프로젝트 초기
+- pom.xml 
+
+파일 업로드 설정
+1. 업로드 파일 저장 폴더
+    - webapp > resources > "files"
+    
+2. web.xml
+    - 인코딩 설정 추가
+    - 여러가지 파일 설정
+    
+3. servlet-context.xml
+    - 파일 업로드 빈
+    
+ 
+ 
+패키지 + 파일
+- "com.test.file.controller" > "FileController.java"
+- views > "ex01.jsp"    // 폼
+        > "ex01ok.jsp   // 다운로드

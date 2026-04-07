@@ -7,14 +7,14 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class AddressDto {
+public class AddressPointDto {
 
 	private String seq;
 	private String name;
-	private String age; 
+	private Integer age;
 	private String address;
 	private String gender;
-	
-	// - 1(tblAddress) : 1(tblPoint)
-	private PointDto pdto; // 자식 객체
+	private String pseq;
+	private Integer point;
+	private String aseq;
 }

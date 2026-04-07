@@ -7,14 +7,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class AddressDto {
-
+public class ProjectDto {
+	
 	private String seq;
 	private String name;
-	private String age; 
-	private String address;
-	private String gender;
+	private String location;
+	private String num;
 	
-	// - 1(tblAddress) : 1(tblPoint)
-	private PointDto pdto; // 자식 객체
 }

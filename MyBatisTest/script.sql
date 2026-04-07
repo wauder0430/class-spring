@@ -29,3 +29,14 @@ insert into TBLADDRESS (seq, name, age, address, gender) VALUES (seqAddress.next
 
 SELECT * FROM TBLADDRESS;
 commit;
+
+select * from TBLADDRESS where age < 10;
+
+
+select * from tblAddress
+			where gender = 'm';
+
+select * from tblAddress
+			where age < 10
+			and gender = 'm'
+			and address like '%강남%'

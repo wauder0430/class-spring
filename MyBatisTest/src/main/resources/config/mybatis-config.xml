@@ -9,7 +9,8 @@
 	
 	<typeAliases>
 		<typeAlias type="com.test.mybatis.model.AddressDto" alias="adto"/>
-	</typeAliases>	
+        <typeAlias type="com.test.mybatis.model.InsaDto" alias="idto"/>
+	</typeAliases>
 	
 </configuration>
 
