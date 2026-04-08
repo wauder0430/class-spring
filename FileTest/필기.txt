@@ -18,3 +18,9 @@ Maven 프로젝트 초기
 - "com.test.file.controller" > "FileController.java"
 - views > "ex01.jsp"    // 폼
         > "ex01ok.jsp   // 다운로드
+        
+        > "ex02.jsp"
+        > "ex02ok.jsp"
+        
+        > "ex03.jsp"
+        > "ex03ok.jsp

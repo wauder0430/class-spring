@@ -40,3 +40,10 @@ select * from tblAddress
 			where age < 10
 			and gender = 'm'
 			and address like '%강남%'
+
+
+
+
+
+
+
