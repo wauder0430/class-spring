@@ -37,8 +37,20 @@ select * from tblMarker;
 commit;
 
 
+create table tblUser(
+    id varchar2(30) PRIMARY KEY ,
+    pw varchar2(30) not null,
+    name varchar2(30) not null
 
 
+);
+
+
+INSERT INTO tblUser values ('hong', '1111', '홍길동');
+INSERT INTO tblUser values ('dog', '1111', '강아지');
+INSERT INTO tblUser values ('cat', '1111', '고양이');
+
+commit;
 
 
 
