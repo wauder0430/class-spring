@@ -27,3 +27,19 @@ Ajax 장,단점
         > "ex06.jsp"
         
         > "ex07.jsp"
+        
+        
+        
+        
+        
+REST Server 역할
+- com.test.ajax.controller > "ServerController.java"
+
+REST Client
+- com.test.ajax.controller > "ClientController.java"
+- views > "ex08.jsp"        
+        
+        
+        
+        
+  

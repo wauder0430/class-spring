@@ -12,7 +12,7 @@
 <body>
     <!-- ex07.jsp -->
     <h1>
-        Ajax <small>전송 데이터 & 수신 데이터</small>
+        Ajax <small>전송 데이터 & 수신 데이터</small></h1>
 
         <h2>수신(응답) 데이터</h2>
 

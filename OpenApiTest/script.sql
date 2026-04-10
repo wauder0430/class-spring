@@ -37,6 +37,7 @@ select * from tblMarker;
 commit;
 
 
+
 create table tblUser(
     id varchar2(30) PRIMARY KEY ,
     pw varchar2(30) not null,
@@ -51,6 +52,20 @@ INSERT INTO tblUser values ('dog', '1111', '강아지');
 INSERT INTO tblUser values ('cat', '1111', '고양이');
 
 commit;
+
+drop table TBLPROJECT;
+drop table tblpoint;
+
+select * from tbladdress;
+
+
+select a.* from (select * from tblAddress order by seq desc) a
+            where rownum  <=5;
+
+select * from
+            (select a.*, rownum as rnum from
+                (select * from tblAddress order by seq desc) a)
+        where rnum between 6 and 10;
 
 
 
