@@ -67,7 +67,7 @@ public class AddMember {
 		dto.setMemberpw(encoder.encode("1111"));
 		dto.setMembername("고양이");
 		dto.setEmail("cat@gmail.com");
-		dto.setGender("m");
+		dto.setGender("f");
 		
 		assertEquals(1, template.insert("security.add", dto));
 		

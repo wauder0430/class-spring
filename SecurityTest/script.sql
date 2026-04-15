@@ -61,3 +61,10 @@ insert into member_auth values ('tiger', 'ROLE_ADMIN'); --일반 유저
 insert into member_auth values ('tiger', 'ROLE_MEMBER'); --일반 유저
 
 commit;
+
+
+-- users-by-username-query
+select memberid as username, memberpw as password, enabled from member where memberid = ?;
+
+-- authorities-by-username-query
+select memberid as username, auth as authority from member_auth where memberid = ?

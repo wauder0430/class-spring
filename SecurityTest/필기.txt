@@ -206,3 +206,17 @@ MyBatis 설정하기
 - security-context.xml > 등록 
 
 
+//
+14. 회원 가입 구현 + 사용자 DB + 원하는 추가 정보 관리 > 프로젝트
+- com.test.java.controller > "MemberController.java"
+- com.test.java.model   > "AuthDto.java"
+                        > "MemberDao.java"
+
+- src/main/resources > mappers > "member.xml"
+- views > "register.jsp"
+
+15. 14번 기본 + 로그인 처리 + 인증 정보 관리
+- com.test.java.auth > "CustomUserDetailsService.java"
+- com.test.java.model > "CustomUser.java" // DTO 역할
+- security-context.xml > 등록 
+
